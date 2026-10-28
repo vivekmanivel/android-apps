@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android Apps · Usualy Labs</title>
+<meta name="description" content="Free, private Android apps by Usualy Labs. Download the latest APK.">
+<style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f6368;--card:#fff;--line:#e3e1da;--acc:#1f6f5c}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe6;--mut:#a6a59f;--card:#1e1e1c;--line:#33322e;--acc:#6cc4a9}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 16px}h1{margin:0 0 4px}p.l{color:var(--mut);margin:0 0 28px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.card h2{font-size:1.1rem;margin:0}.meta{font-size:.82rem;color:var(--mut)}.tag{display:inline-block;font-size:.75rem;border:1px solid var(--line);border-radius:99px;padding:1px 8px;margin:0 4px 4px 0}
+a{color:var(--acc)}.btns{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+a.dl{background:var(--acc);color:var(--bg);text-decoration:none;font-weight:600;padding:5px 12px;border-radius:8px}
+footer{margin-top:40px;font-size:.85rem;color:var(--mut)}
+</style>
+</head>
+<body><div class="wrap">
+<h1>Android Apps</h1>
+<p class="l">Free Android apps by Usualy Labs. Each tile always links to the latest version. No accounts, nothing collected.</p>
+<div class="grid" id="grid"></div>
+<footer>To install, open the downloaded APK on your phone and allow installs from your browser or files app when Android asks. A new version installs over the old one and keeps your data. Report problems via <a href="https://github.com/vivekmanivel/android-apps/issues">GitHub Issues</a>.</footer>
+</div>
+<script src="apps.js"></script>
+<script>
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const REPO='https://github.com/vivekmanivel/android-apps';
+document.getElementById('grid').innerHTML=(window.APPS||[]).map(a=>`<div class="card">
+<h2>${esc(a.title)}</h2><div class="meta">v${esc(a.version)} · ${esc(a.category)} · released ${esc(a.released)} · ${esc(a.requires)}</div>
+<p>${esc(a.summary)}</p>
+<div>${(a.tags||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
+<div class="btns"><a class="dl" href="${REPO}/releases/download/${esc(a.slug)}/${esc(a.apk)}">Download APK</a><a href="${REPO}/blob/main/apps/${esc(a.slug)}/README.md">Readme</a><a href="${REPO}/blob/main/apps/${esc(a.slug)}/CHANGELOG.md">Changes</a></div></div>`).join('')||'<p>No apps yet.</p>';
+</script>
+</body></html>
