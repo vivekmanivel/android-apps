@@ -22,7 +22,7 @@ footer{margin-top:40px;font-size:.85rem;color:var(--mut)}
 <h1>Android Apps</h1>
 <p class="l">Free Android apps by Usualy Labs. Each tile always links to the latest version. No accounts, nothing collected.</p>
 <div class="grid" id="grid"></div>
-<footer>To install, open the downloaded APK on your phone and allow installs from your browser or files app when Android asks. A new version installs over the old one and keeps your data. Report problems via <a href="https://github.com/vivekmanivel/android-apps/issues">GitHub Issues</a>.</footer>
+<footer>To install, open the downloaded APK on your phone and allow installs from your browser or files app when Android asks. A new version installs over the old one and keeps your data. The Windows installer is not signed yet: choose <b>More info → Run anyway</b>. Report problems via <a href="https://github.com/vivekmanivel/android-apps/issues">GitHub Issues</a>.</footer>
 </div>
 <script src="apps.js"></script>
 <script>
@@ -32,6 +32,6 @@ document.getElementById('grid').innerHTML=(window.APPS||[]).map(a=>`<div class="
 <h2>${esc(a.title)}</h2><div class="meta">v${esc(a.version)} · ${esc(a.category)} · released ${esc(a.released)} · ${esc(a.requires)}</div>
 <p>${esc(a.summary)}</p>
 <div>${(a.tags||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
-<div class="btns"><a class="dl" href="${REPO}/releases/download/${esc(a.slug)}/${esc(a.apk)}">Download APK</a><a href="${REPO}/blob/main/apps/${esc(a.slug)}/README.md">Readme</a><a href="${REPO}/blob/main/apps/${esc(a.slug)}/CHANGELOG.md">Changes</a></div></div>`).join('')||'<p>No apps yet.</p>';
+<div class="btns"><a class="dl" href="${REPO}/releases/download/${esc(a.slug)}/${esc(a.apk)}">Download APK</a>${a.msi?`<a href="${REPO}/releases/download/${esc(a.slug)}/${esc(a.msi)}">Windows installer</a>`:""}<a href="${REPO}/blob/main/apps/${esc(a.slug)}/README.md">Readme</a><a href="${REPO}/blob/main/apps/${esc(a.slug)}/CHANGELOG.md">Changes</a></div></div>`).join('')||'<p>No apps yet.</p>';
 </script>
 </body></html>

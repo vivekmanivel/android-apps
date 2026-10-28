@@ -10,7 +10,9 @@
 - **Desktop companion** that pairs and syncs over your home Wi-Fi, never through a cloud.
 
 ## Install
-Download the APK from the [Android Apps page](https://vivekmanivel.github.io/android-apps/) and open it on your phone. Android 8.0 or later. A new version installs over the old one and keeps your data.
+From the [Android Apps page](https://vivekmanivel.github.io/android-apps/):
+- **Phone:** download the APK and open it. Android 8.0 or later. A new version installs over the old one and keeps your data.
+- **Windows laptop:** download the Windows installer (`.msi`) and run it. It is not signed yet, so choose **More info → Run anyway**.
 
 ## Changes
 See [CHANGELOG.md](CHANGELOG.md).

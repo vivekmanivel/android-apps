@@ -11,9 +11,9 @@ One tile per app, each linking to its latest APK, its readme and its changes. On
 
 ## Publishing a new version
 ```
-scripts/publish.sh <slug> <version> <path-to-apk> [path-to-release-notes.md]
+NOTES=path/to/release-notes.md scripts/publish.sh <slug> <version> <file.apk> [file.msi]
 ```
-Each app has one GitHub Release tagged with its slug. The script replaces that release's APK, copies the release notes to `apps/<slug>/CHANGELOG.md`, updates the tile in `apps.js`, and pushes.
+Each app has one GitHub Release tagged with its slug. The script replaces that release's files (APK, and MSI for apps with a Windows version), copies the release notes to `apps/<slug>/CHANGELOG.md`, updates the tile in `apps.js`, and pushes.
 
 ## Adding an app
 Add an entry to `apps.js` and a folder `apps/<slug>/` with `README.md` and `CHANGELOG.md`, then run `scripts/publish.sh`.
