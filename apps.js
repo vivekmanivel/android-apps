@@ -15,7 +15,7 @@ window.APPS = [
     "slug": "ingredient-advisor",
     "title": "Food Ingredient Advisor",
     "version": "0.3.0",
-    "released": "2026-10-11",
+    "released": "2026-10-28",
     "category": "Food & health",
     "apk": "IngredientAdvisor-0.3.0.apk",
     "summary": "Point the camera at the ingredients list on a UK food label. Get a verdict for your diets, allergies and goals, see how each ingredient is made from raw materials, and compare similar products. Labels are read on the phone.",
