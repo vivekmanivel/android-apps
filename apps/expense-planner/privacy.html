@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expense Planner privacy policy</title>
+<meta name="description" content="Privacy policy for Expense Planner by Usualy Labs: your money records stay on your own devices.">
+<style>
+  :root { --bg: #ffffff; --fg: #1c1b1f; --muted: #5f5b66; --accent: #6a1b9a; --line: #e4dfea; --card: #f7f2fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141218; --fg: #e8e1ec; --muted: #b5adbd; --accent: #d7a6f0; --line: #3a3440; --card: #1f1b24; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 32px 0 8px; color: var(--accent); }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  .summary { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Expense Planner privacy policy</h1>
+<p class="meta">Expense Planner 1.7 by Usualy Labs, for Android, Windows, macOS and Linux. Last updated 2 November 2026.</p>
+
+<div class="summary">
+<p><strong>In short:</strong> Expense Planner keeps your money records on your own devices. There is no account to create, no cloud service run by us, and no advertising or tracking. We, the people who make it, never receive any of your data.</p>
+</div>
+
+<h2>What the app stores, and where</h2>
+<p>The app stores your accounts, transactions, budgets, plans, reminders, settings and attachments (such as receipt photos), and, if you turn on message capture, the bank notifications and texts it has read. They are kept only on the device where you entered them, and on devices you choose to sync with.</p>
+<ul>
+<li><strong>On a phone,</strong> the database is encrypted with a key held by Android's secure key store. That key never leaves the device.</li>
+<li><strong>On a computer,</strong> the database is encrypted with a key that comes from your passphrase.</li>
+</ul>
+<p>Android's cloud backup and device-to-device transfer are switched off for the app.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing leaves your device unless you choose to send it:</p>
+<ul>
+<li><strong>Backup files</strong> you make: encrypted with a passphrase you choose, and saved where you choose.</li>
+<li><strong>Exports</strong> (CSV files) and <strong>reports</strong> (PDF or CSV) you save or share. These are not encrypted, so keep them safe.</li>
+<li><strong>Sync with devices you have paired:</strong> data goes straight between your devices over your local network, encrypted with TLS 1.3, and each device checks the other's identity. No server is involved. To find each other, devices announce a random name on the local network, never your name or your data.</li>
+</ul>
+<p>An account you mark <em>Keep on this device only</em> never syncs.</p>
+
+<h2>Voice</h2>
+<p>Voice is turned into text by your phone's own speech recogniser. Expense Planner never records or keeps audio. Where a phone has no offline recogniser, Android's online speech service may be used; you can turn this off in Settings → Voice. Android may then send audio to its speech provider; Expense Planner itself sends nothing.</p>
+
+<h2>Receipt photos</h2>
+<p>When you scan a receipt, the photo is read on your device by Tesseract, an open-source text-recognition engine that works offline. The items and total are matched to your own categories and payees by fixed rules, with no artificial intelligence. Neither the photo nor its text is sent anywhere.</p>
+
+<h2>Bank notifications and texts</h2>
+<p>This applies only if you turn on message capture, on Android:</p>
+<ul>
+<li>Only notifications from the banking apps you choose (and, in the version downloaded directly from us, texts from the senders you choose) are read, on the device.</li>
+<li>Any other message is ignored at once and never stored.</li>
+<li>The text of each captured message is deleted after the time you choose (90 days by default). What was understood from it stays, as a transaction or an item to review.</li>
+</ul>
+<p>The Google Play version does not read text messages.</p>
+
+<h2>What is never collected</h2>
+<p>No analytics or usage statistics, no crash reports, no advertising identifiers and no advertising of any kind. The app never contacts us or any other server, and needs no internet connection to work.</p>
+
+<h2>Permissions (Android)</h2>
+<p>The app asks for each permission only when you turn on the feature that needs it, and you can take any back in your device's settings.</p>
+<table>
+<tr><th>Permission</th><th>Used for</th></tr>
+<tr><td>Notifications</td><td>Reminders, budget alerts and backup status</td></tr>
+<tr><td>Microphone</td><td>Voice entry</td></tr>
+<tr><td>Camera</td><td>Scanning receipts and pairing codes</td></tr>
+<tr><td>Notification access (if you turn it on)</td><td>Reading payment notifications from the banking apps you choose</td></tr>
+<tr><td>SMS (directly downloaded version only)</td><td>Reading bank texts from the senders you choose</td></tr>
+<tr><td>Exact alarms (directly downloaded version only)</td><td>Reminders at the exact time you set</td></tr>
+<tr><td>Local network and internet</td><td>Syncing with your paired devices on your own Wi-Fi</td></tr>
+<tr><td>Run at start-up</td><td>Putting reminders back after the phone restarts</td></tr>
+</table>
+
+<h2>Your data is yours</h2>
+<p>You can export everything as plain CSV files, make an encrypted backup and restore it here or on another device, or move to a new device by pairing it. Uninstalling the app deletes its database and files; backups and exports you saved stay wherever you put them.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children and collects nothing from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version is published here and ships with the app.</p>
+
+<footer>Usualy Labs · <a href="../../">Android apps</a></footer>
+</main>
+</body>
+</html>
