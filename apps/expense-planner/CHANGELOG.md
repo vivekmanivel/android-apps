@@ -1,6 +1,133 @@
 # Release notes
 
-Newest first.
+The text of each GitHub Release, kept here too so it travels with the code. Newest first.
+
+---
+
+## v1.8.1: Fixes from the 1.8.0 review
+
+*5 November 2026 · Android versionCode 18 · database schema 4 (unchanged)*
+
+**Install:** `ExpensePlanner-1.8.1.apk` updates 1.8.0 in place and keeps your data (from 1.7.x it also moves the database to schema 4). `ExpensePlanner-1.8.1.msi` updates the Windows app (unsigned: **More info → Run anyway**). Phone and laptop sync on 1.8.0 or 1.8.1.
+
+### Fixed
+- **Owed and owing:** **History** opened a blank page; it now lists every lend, borrow and settle-up with that person.
+- **Larger system text** (as on many Samsung phones): the Plan tabs no longer break words over two lines ("Recurrin / g"); they stay on one line and scroll sideways when they don't fit. The bottom navigation labels stay on one line too.
+
+### Changed
+- **Lend and Borrow** show the people you've already added, so you tap a name instead of typing it again.
+- **Claims:** a **New claim** button lists your recent purchases to pick from (**⋮ To claim…** on a purchase still works).
+
+---
+
+## v1.8.0: Money with people, a bills pot, claims and a calendar
+
+*4 November 2026 · Android versionCode 17 · database schema 4*
+
+**Install:** `ExpensePlanner-1.8.0.apk` updates 1.7.x in place and keeps your data; the database moves to schema 4 on first open. `ExpensePlanner-1.8.0.msi` updates the Windows app (unsigned: **More info → Run anyway**). Update the phone and the laptop together: sync needs both on 1.8.0.
+
+### New
+- **Owed and owing** (More): lend to or borrow from someone outside the household, settle up in part or in full, and share a balance as text. Money owed to you counts in your net worth.
+- **Split a bill with others:** "Split equally with" in quick add, or **⋮ Split with…** on a purchase already saved (for example one captured from the bank). Your share is your spending; each person owes theirs.
+- **Bills pot** (More): set money aside each month for bills that don't come monthly, such as insurance, the TV licence or water. Choose the bills and the account; the app works out the monthly amount, takes each bill out of the pot when it's paid, and warns early if the pot will be short, with the extra needed a month.
+- **Claims** (More): mark a purchase **⋮ To claim…** from your employer or someone else. Mark it claimed, then paid back (in part or in full). Repayments are refunds in the same category, so the money doesn't count as your spending.
+- **Person budgets:** a budget line for a person, such as an allowance. It counts only what they spend and is never added to the totals.
+- **Calendar** (the calendar button in Transactions): each day's spending, shaded against the month's busiest day, with a dot for income, bills still to come, a **?** on past days with nothing entered and a **✓** on no-spend days. Swipe between months; filter by account, category, tag or person; tap a day to see it and **Add on this day**.
+
+### Not yet
+- A reports switch to leave out money waiting to be paid back, and a reminder for claims waiting 30 days.
+- Choosing which categories count for no-spend days (bills, housing, fees and fixed costs don't count for now).
+
+---
+
+## v1.7.1: Fixes from the first review
+
+*2 November 2026 · Android versionCode 16 · database schema 3 (unchanged)*
+
+**Install:** `ExpensePlanner-1.7.1.apk` updates 1.7.0 in place and keeps your data. `ExpensePlanner-1.7.1.msi` updates the Windows app (unsigned: **More info → Run anyway**).
+
+### Fixed
+- **Round-ups:** switching them on from an account's page is now always saved, even if you leave the page straight away.
+- **Receipt items:** two-word names are understood before their last word, so "kitchen roll" and "toilet tissue" go to household, not bread, and "dog food", "ice cream" and "sausage roll" find the right place too.
+
+---
+
+## v1.7.0: Round-ups you can see, a setup journey, and ready for Google Play
+
+*2 November 2026 · Android versionCode 15 · database schema 3 (unchanged)*
+
+**Install:** `ExpensePlanner-1.7.0.apk` updates 1.6.0 in place and keeps your data. `ExpensePlanner-1.7.0.msi` updates the Windows app (unsigned: **More info → Run anyway**). The phone and laptop can sync with each other on 1.6.0 or 1.7.0.
+
+### Changed
+- **Round-ups now show in each purchase.** With round-ups on, a £1.97 purchase is saved as £2.00, split into its category (£1.97) and **Round-ups** (3p), as your bank takes it. The transactions list shows **−£0.03 · −£1.97**, with the round-up smaller and in another colour. If your bank didn't round one up, edit the purchase and change or remove the Round-ups line. Home and Accounts show what each account has rounded up this month. Turn round-ups on per account on its page. Purchases from before you turned them on are unchanged.
+
+### New
+- **A setup journey** on a new device: household name, currencies, accounts, categories, tags, then features. Each feature asks for its permission only when you switch it on, with Android's own dialog for the microphone, notifications and text messages. Skip any step. Run it again from **Settings → Run setup again**.
+- **Help when Android blocks a permission** for an app installed from a downloaded file: setup explains **Allow restricted settings** and opens App info.
+
+### For Google Play
+- **A Play build** that leaves out text-message reading and exact alarms, as Play's policies require. Bank payments can still be read from banking-app notifications.
+
+---
+
+## v1.6.0: Receipt items, round-ups and subscriptions
+
+*29 October 2026 · Android versionCode 14 · database schema 3*
+
+**Install:** `ExpensePlanner-1.6.0.apk` updates 1.5.0 in place and keeps your data. `ExpensePlanner-1.6.0.msi` updates the Windows app (unsigned: **More info → Run anyway**).
+
+**Update the phone and the laptop before syncing again.** The database has changed, and sync waits until both are on 1.6.0.
+
+### New
+- **Receipts read item by item.** After a scan, the items are sorted into your categories and the entry is saved as one transaction split by category, for example Groceries £34.10 and Pets £6.00. **Check items** shows them grouped. Tap an item to change its category, then choose **For this shop**, **Everywhere** or **Just this once**. **Use the total only** saves it as before. You can turn this off in **Settings → Receipts → Itemise receipts**.
+- **Round-ups.** On a current, cash or wallet account, choose how round-ups work:
+  - **Set aside:** each purchase is rounded up to the nearest £1 (or £2, £5, £10, and times 2 or 3), and the difference is set aside within the account. Your balance still matches the bank, and the account shows what is set aside and what is available.
+  - **Set aside and move weekly:** the same, plus **I've moved it** to record the transfer to savings.
+  - **My bank does it:** your bank's own round-up transfers to the pot account are labelled and totalled. Nothing is set aside, so nothing is counted twice.
+  Safe to spend and the forecast use what is available.
+- **Subscriptions** (Plan → Recurring → the subscriptions button). See what your subscriptions cost a month and a year, when each renews, and any price change. Set a trial's end for reminders 3 days and 1 day before. Cancel one to see what you'll save in a year. Recurring payments that look like subscriptions are suggested.
+
+### Improved
+- **Prices on small or distant receipts are read more reliably**, on the phone and the computer.
+
+---
+
+## v1.5.0: New name on the phone, new icon
+
+*28 October 2026 · Android versionCode 13*
+
+**Install:** `ExpensePlanner-1.5.0.apk` installs as a **new app** beside 1.4.x, because the app has its final ID (`com.usualylabs.expenseplanner`). To bring your data across:
+1. In the old app, open **Backup and restore** and tap **Back up now**.
+2. Install 1.5.0, open it and choose **Restore from a backup**.
+3. Check your accounts and balances, then uninstall the old app.
+
+`ExpensePlanner-1.5.0.msi` updates the Windows app in place (unsigned: **More info → Run anyway**).
+
+### Changed
+- **A new icon:** a receipt on purple, on the phone, the splash screen and the Windows app.
+- **The app's final ID**, so it can go on Google Play.
+
+---
+
+## v1.4.6: New categories heard straight away
+
+*28 October 2026 · Android versionCode 12*
+
+**Install:** `ExpensePlanner-1.4.6.apk` updates any 1.x in place and keeps your data. `ExpensePlanner-1.4.6.msi` updates the Windows app (unsigned: **More info → Run anyway**).
+
+### Fixed
+- **A category or tag you've just added is recognised by voice the next time you speak.** Before, voice kept the words it first learnt, until something else (such as rebuilding the search index) reloaded them.
+
+---
+
+## v1.4.5: A keypad that stays put
+
+*28 October 2026 · Android versionCode 11*
+
+**Install:** `ExpensePlanner-1.4.5.apk` updates any 1.x in place and keeps your data. `ExpensePlanner-1.4.5.msi` updates the Windows app (unsigned: **More info → Run anyway**).
+
+### Fixed
+- **The keypad no longer jumps while you type.** The "possible duplicate" warning arrives a moment after the amount; it now appears in a space kept for it under the amount, so a quick tap never lands on the wrong key.
 
 ---
 
@@ -70,7 +197,7 @@ Newest first.
 ### Fixed
 - **Voice on older phones:** on phones such as a OnePlus 5 on Android 10, where Android hides its speech service from apps, the mic now uses Android's own **"Speak now"** prompt instead of not appearing at all.
 - **Settings → Voice** now says plainly when no speech-to-text service was found, with step-by-step help, an **Open voice input settings** button and **Check again**. It no longer tells you to allow something it doesn't offer.
-- A full voice set-up guide is in the app under Settings → Voice.
+- A full guide is in [docs/VOICE_SETUP.md](VOICE_SETUP.md).
 
 ---
 
