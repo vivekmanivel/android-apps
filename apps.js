@@ -3,11 +3,11 @@ window.APPS = [
   {
     "slug": "expense-planner",
     "title": "Expense Planner",
-    "version": "1.8.1",
-    "released": "2026-11-05",
+    "version": "1.10.0",
+    "released": "2026-11-11",
     "category": "Personal finance",
-    "apk": "ExpensePlanner-1.8.1.apk",
-    "msi": "ExpensePlanner-1.8.1.msi",
+    "apk": "ExpensePlanner-1.10.0.apk",
+    "msi": "ExpensePlanner-1.10.0.msi",
     "summary": "A private, offline-first family expense tracker and budget planner. Quick add by voice or receipt photo, who spent it, budgets and plans, encrypted on your own devices, with a Windows companion that syncs over your home network. No accounts, no ads, no analytics.",
     "tags": ["Offline-first", "Encrypted on device", "Voice & receipts"],
     "requires": "Android 8.0+ · Windows"

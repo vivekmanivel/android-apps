@@ -4,6 +4,40 @@ The text of each GitHub Release, kept here too so it travels with the code. Newe
 
 ---
 
+## v1.10.0: The loose ends
+
+*11 November 2026 · Android versionCode 20 · database schema 5 (unchanged)*
+
+**Install:** `ExpensePlanner-1.10.0.apk` updates 1.9.x in place and keeps your data. `ExpensePlanner-1.10.0.msi` updates the Windows app (unsigned: **More info → Run anyway**). Phone and laptop sync on 1.9.0 or 1.10.0.
+
+### New
+- **Claims:** reports can **exclude money waiting to be paid back** (on for the monthly summary, a switch in the report builder), and a claim reminds you after 30 days ("£84.20 waiting to be paid back for 30 days").
+- **Owed and owing:** Lend and Borrow can **remind you if not settled in 2 weeks**.
+- **Split with…** on a purchase can now split **by amount** or **by shares**, not only equally.
+- **Bills pot:** each month's set-aside is added without opening the pot, and you get a reminder a month before a bill the pot won't cover.
+- **Debt plan:** **Make it my plan** also adds a **Debt repayment** line to this month's budget, which counts your payments to the debts.
+- **Returns:** the return reminder has **Returned** and **Keep** buttons on the phone.
+- **No-spend days:** optional **gentle challenges**: Home says so after a no-spend weekend or 3 no-spend days in a week. Turn them on in No-spend days.
+
+---
+
+## v1.9.0: A debt plan, returns and warranties, and no-spend days
+
+*5 November 2026 · Android versionCode 19 · database schema 5*
+
+**Install:** `ExpensePlanner-1.9.0.apk` updates 1.8.x in place and keeps your data; the database moves to schema 5 on first open. `ExpensePlanner-1.9.0.msi` updates the Windows app (unsigned: **More info → Run anyway**). Update the phone and the laptop together: sync needs both on 1.9.0.
+
+### New
+- **Debt plan** (More): choose the cards and loans to clear, how much you can put towards them each month and the order: **Avalanche** (highest rate first, the least interest), **Snowball** (smallest balance first) or your own. See when you'll be debt-free, the interest on the way, what you save against paying only the minimums, when each debt clears, a chart, and Avalanche beside Snowball. Add a card's interest rate, and any 0% period, right there. **Make it my plan** puts next month's payments above each minimum into Upcoming, and re-plans from your real balances each time you open it. Expense Planner does not give financial advice.
+- **Returns and warranties** (More): on any purchase, **⋮ Return or warranty…** sets a Return by and Warranty until date (14, 28 or 30 days, 1 or 2 years, or a date). A scanned receipt that says "returns within 28 days" sets it for you. You're reminded three days before; mark it **Returned** or **Keep**.
+- **No-spend days:** a Home card ("4 no-spend days this month · 2 in a row"), a line in the weekly summary, and the calendar's ✓. Bills, housing, loan interest, bank fees and fixed costs don't count against a day; tap the card to choose the categories yourself.
+
+### Not yet
+- "Make it my plan" adding a Debt repayment line to the budget.
+- Done and Keep buttons on the return reminders themselves, and no-spend challenges.
+
+---
+
 ## v1.8.1: Fixes from the 1.8.0 review
 
 *5 November 2026 · Android versionCode 18 · database schema 4 (unchanged)*
